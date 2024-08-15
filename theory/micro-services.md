@@ -40,11 +40,11 @@ also use the Function as a Service (FaaS) approach.
                     - It extremely difficult to change technology or framework because everything is tightly coupled.
                     
  **Microservice architecture:**
-                    - Microservices architecture is built as small independent module based on business functionality.
+                    - Microservices architecture is built as small independent module based on business functionality.qaq
                     - It is easy to scale based on demand.
                     - Each project and module has their own database.
                     - Each project is independent and small in size. So overall build and development time gets decrease.
-                    - Easy to change technology or framework because every module and project is independent & loosly coupled.
+                    - Easy to change technology or framework because every module and project is independent & loosely coupled.
                     
 **7).What is load balancing?**
 Ans). Load balancing is the process of distributing the traffic among different instances of the same application. 
@@ -57,12 +57,16 @@ In the context of microservices architecture, a circuit breaker is a design patt
 It is a software component that monitors the calls to a service and detects if the service is unavailable or experiencing high latency. 
 When the circuit breaker detects a problem with the service, it "trips" and temporarily stops making further requests to the service.
 
-The circuit breaker has three states: open, closed, and half-open. In the closed state, 
-the circuit breaker allows calls to pass through to the service as normal. In the open state, 
-the circuit breaker prevents any calls from being made to the service and returns an error message to the calling application immediately,
-without making the call. In the half-open state, the circuit breaker allows a limited number of calls to be made to the service,
-to check if it has recovered, and if the calls succeed, it switches back to the closed state. If the calls fail, it returns to the open state.
+The circuit breaker has three states: open, closed, and half-open. 
+-> In the closed state, the circuit breaker allows calls to pass through to the service as normal. 
+-> In the open state, the circuit breaker prevents any calls from being made to the service and returns an error message 
+to the calling application immediately, without making the call.
+-> In the half-open state, the circuit breaker allows a limited number of calls to be made to the service, to check if it has recovered, 
+and if the calls succeed, it switches back to the closed state. If the calls fail, it returns to the open state.
 
-The circuit breaker pattern is used to increase the fault tolerance and resilience of microservices by preventing cascading failures. By using a circuit breaker, a failing service can be isolated and prevented from causing problems for other services that depend on it. The circuit breaker also provides a way to degrade gracefully in the event of a failure, allowing the application to continue to function with reduced functionality rather than crashing completely.
+The circuit breaker pattern is used to increase the fault tolerance and resilience of microservices by preventing cascading failures. 
+By using a circuit breaker, a failing service can be isolated and prevented from causing problems for other services that depend on it.
+The circuit breaker also provides a way to degrade gracefully in the event of a failure, allowing the application to continue
+to function with reduced functionality rather than crashing completely.
 
 In summary, in the context of microservices architecture, the open state refers to the circuit breaker preventing calls to a failing service, while the closed state refers to the circuit breaker allowing calls to the service as normal.

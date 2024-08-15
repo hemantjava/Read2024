@@ -1,6 +1,7 @@
 ###(Amazon EKS)
 * **Kubernetes is container orchestration and Management tool**
 ![img.png](images/eks2.png)
+
 Amazon Elastic Kubernetes Service (Amazon EKS) is a fully managed Kubernetes service provided by Amazon Web Services (AWS).
 It simplifies the process of running Kubernetes on AWS by removing the need for users to install,
 operate, and maintain their own Kubernetes control plane. With Amazon EKS, users can easily create and manage Kubernetes clusters,

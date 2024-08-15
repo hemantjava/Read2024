@@ -8,10 +8,10 @@ data from Scanned pdf Document/TRF(Test Requisition Form)
 by helping of amazon textract service. Amazon Textract is a machine learning (ML) Amazon service that automatically 
 extracts text from handwriting or digitally filled documents. It extract structured data such as tables,form,Blocks,Lines,Words etc. 
 
-here we are applying validation, business implementation, mapping and 
+~~here we are applying validation, business implementation, mapping and 
 converting Client Specific CDM(Canonical Data Model) data from raw data. then we send CDM data to outbound queue.
-     In my Project there ara 3 microservices and we are using even-driven microservices architecture.
-     1)MFAX , 2)TES, 3)AUDIT, 3)SFDC
+     In my Project there ara 4 microservices and we are using even-driven microservices architecture.
+     1)MFAX , 2)TES, 3)AUDIT, 4)SFDC
             MFX is responsible for upload patient filled scanned document to S3 bucket 
             and send to inbound queue.
                                  (In inbound queue having 3 details of s3 bucket URL, Tracking id and Document type)
@@ -22,7 +22,7 @@ converting Client Specific CDM(Canonical Data Model) data from raw data. then we
 Purpose of this architecture: Gathering the information from Cancer Patient and creating the data lake,
 for cure the cancer patient in early stage.
     
-Note:- (TRF form contains cancer patients blood sample details.) 
+Note:- (TRF form contains cancer patients blood sample details.)~~ 
      
 My project is TES(Text Extraction Service). this is based on Health care domain. Here we are using 
 event driven microservice architecture. and this project having 4 microservices: MFAX, TES,AUDIT, SFDC portal.

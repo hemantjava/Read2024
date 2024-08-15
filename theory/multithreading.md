@@ -31,7 +31,7 @@ such as when you are processing a large number of long-running tasks.
 want to optimize resource usage, while newFixedThreadPool(int nThreads) is better for scenarios
 where you have a fixed amount of resources to process a large number of long-running tasks.
 
-**=>CyclicBarrier vs countdownlatch difference**
+**=>CyclicBarrier vs countdown-latch difference**
 
 *) Usage: CyclicBarrier is used to synchronize a group of threads at a specific point, where each thread waits for other
 threads to reach the same point, and then all threads can proceed together. 

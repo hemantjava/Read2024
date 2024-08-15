@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>DSA-2024</artifactId>
+    <artifactId>DSA</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

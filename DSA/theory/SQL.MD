@@ -8,8 +8,8 @@ WHERE CustomerID < (SELECT MAX(CustomerID) FROM Customers);
 ```sql
 SELECT * 
 FROM Customers 
-GROUP BY CustomerID 
-ORDER BY CustomerID DESC 
+--GROUP BY SAL 
+ORDER BY SAL DESC 
 LIMIT 1 OFFSET n-1;
 ```
 

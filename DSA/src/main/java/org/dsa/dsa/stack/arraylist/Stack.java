@@ -1,4 +1,4 @@
-package org.dsa.stack.arraylist;
+package org.dsa.dsa.stack.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;

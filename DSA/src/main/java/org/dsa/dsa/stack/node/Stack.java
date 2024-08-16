@@ -1,4 +1,4 @@
-package org.dsa.stack.node;
+package org.dsa.dsa.stack.node;
 
 public class Stack<T> {
     private Node<T> top;

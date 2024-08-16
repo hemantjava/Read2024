@@ -1,0 +1,1 @@
+![img_1.png](../../../../../../../images/creational.png)

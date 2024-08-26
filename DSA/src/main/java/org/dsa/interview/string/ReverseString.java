@@ -1,4 +1,4 @@
-package org.dsa.string;
+package org.dsa.interview.string;
 
 public class ReverseString {
     public static void main(String[] args) {

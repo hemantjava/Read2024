@@ -1,4 +1,4 @@
-package org.dsa.string;
+package org.dsa.interview.string;
 
 public class PalindromeString {
     public static void main(String[] args) {

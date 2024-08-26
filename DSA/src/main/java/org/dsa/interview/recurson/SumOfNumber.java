@@ -1,4 +1,4 @@
-package org.dsa.recurson;
+package org.dsa.interview.recurson;
 
 public class SumOfNumber {
 

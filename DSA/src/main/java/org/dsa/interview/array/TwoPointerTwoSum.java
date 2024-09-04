@@ -1,8 +1,12 @@
-package org.dsa.array.twopointer;
+package org.dsa.interview.array;
 
 import java.util.Arrays;
 
-public class TwoPointer {
+/**
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+public class TwoPointerTwoSum {
     public static void main(String[] args) {
         int[] arr = {1, 3, 5, 6, 8, 9};
         int target = 4;

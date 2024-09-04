@@ -1,10 +1,10 @@
-package org.dsa.array;
+package org.dsa.interview.array;
 
 import java.util.Arrays;
 
 public class ShiftZeroToEnd {
     public static void main(String[] args) {
-        int[] arr = {1, 0, 7, 8, 9, 0, 0, 1, 2};
+        int[] arr = {1, 0, 7, 8, 9, 0, 0, 1, 2}; //1st occurrence zero swapped with 1st occurrence number
         shiftZeroToEnd(arr);
         System.out.println(Arrays.toString(arr));
     }

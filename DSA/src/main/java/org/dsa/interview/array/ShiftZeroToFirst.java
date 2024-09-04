@@ -1,4 +1,4 @@
-package org.dsa.array;
+package org.dsa.interview.array;
 
 import java.util.Arrays;
 

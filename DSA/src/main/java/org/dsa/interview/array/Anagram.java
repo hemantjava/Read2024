@@ -1,4 +1,4 @@
-package org.dsa.array;
+package org.dsa.interview.array;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -25,6 +25,7 @@ public class Anagram {
     //preferred one
     private static boolean isValidAnagram1(String source, String target) {
 
+        //length should be equal to target length and source length
         if (source.length() != target.length()) {
             return false;
         }

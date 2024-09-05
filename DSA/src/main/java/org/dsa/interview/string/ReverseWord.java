@@ -26,6 +26,7 @@ public class ReverseWord {
         StringBuilder sb  = new StringBuilder();
         for (int i = split.length-1; i >= 0 ; i--) {
             sb.append(split[i]);
+            if (i < split.length)
             sb.append(" ");
         }
         return sb.toString();

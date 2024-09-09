@@ -1,7 +1,10 @@
 package org.dsa.dsa.hashmap.simpleway;
 
-import com.hemant.ds.hashmap.list.HashMap;
-import com.hemant.ds.hashmap.list.Map;
+
+
+
+
+import org.dsa.dsa.hashmap.list.Map;
 
 import java.util.ArrayList;
 import java.util.Arrays;

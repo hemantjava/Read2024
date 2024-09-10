@@ -1,4 +1,4 @@
-package org.dsa.design.patterns.solid.ifs;
+package org.dsa.design.patterns.solid.isp;
 
 public interface Eatable {
     void eat();

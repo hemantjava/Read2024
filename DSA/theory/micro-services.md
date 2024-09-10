@@ -56,6 +56,7 @@ Two types of load balancing in microservices architecture are used: server side 
 In the context of microservices architecture, a circuit breaker is a design pattern used to prevent cascading failures in distributed systems. 
 It is a software component that monitors the calls to a service and detects if the service is unavailable or experiencing high latency. 
 When the circuit breaker detects a problem with the service, it "trips" and temporarily stops making further requests to the service.
+![img_6.png](images%2Fimg_6.png)
 
 The circuit breaker has three states: open, closed, and half-open. 
 -> In the closed state, the circuit breaker allows calls to pass through to the service as normal. 
@@ -69,4 +70,38 @@ By using a circuit breaker, a failing service can be isolated and prevented from
 The circuit breaker also provides a way to degrade gracefully in the event of a failure, allowing the application to continue
 to function with reduced functionality rather than crashing completely.
 
-In summary, in the context of microservices architecture, the open state refers to the circuit breaker preventing calls to a failing service, while the closed state refers to the circuit breaker allowing calls to the service as normal.
+In summary, in the context of microservices architecture, the open state refers to the circuit breaker preventing calls to a failing service,
+while the closed state refers to the circuit breaker allowing calls to the service as normal.
+
+### Orchestration and choreography 
+these are two different approaches to managing interactions between services in a distributed system, particularly in the context of microservices and service-oriented architectures (SOA). Here's how they differ:
+
+Orchestration:
+* Definition: Orchestration involves a central controller (orchestrator) that manages and coordinates the interactions between different services. The orchestrator dictates the flow of the process, deciding which service to call and when, handling all the logic for communication.
+* Control: Centralized control. The orchestrator has full visibility and control over the process, making it easier to manage complex workflows.
+* Example: In a microservices-based e-commerce application, an order processing service might act as the orchestrator, sequentially calling the inventory service, payment service, and shipping service to complete an order.
+
+Advantages:
+* Simplifies complex workflows by centralizing the logic.
+* Easier to manage, monitor, and change the flow of processes.
+
+Disadvantages:
+* Can become a bottleneck if the orchestrator is overwhelmed or fails.
+* The system becomes more tightly coupled to the orchestrator, reducing flexibility.
+
+Choreography:
+* Definition: Choreography involves a decentralized approach where each service knows what to do and when, based on specific events or messages it receives. There’s no central controller; services interact with each other directly, typically through event-based communication.
+* Control: Decentralized control. Each service is responsible for reacting to events and triggering other services as necessary.
+* Example: In the same e-commerce application, when an order is placed, the order service emits an event. The inventory service listens for this event and updates the stock. The payment service also listens for the order event and processes the payment, and so on.
+
+Advantages:
+* More resilient and scalable since there is no single point of failure.
+* Promotes loose coupling and flexibility, making it easier to add or modify services without affecting others.
+
+Disadvantages:
+* Harder to manage and monitor as the system grows in complexity, with multiple services interacting asynchronously.
+* Debugging and tracing issues can be more challenging due to the lack of a centralized flow.
+
+Summary:
+* Orchestration: Centralized control with a single orchestrator managing the workflow. Easier to manage but can create a bottleneck.
+* Choreography: Decentralized, event-driven interactions between services. More flexible and scalable but harder to manage and monitor.

@@ -16,7 +16,7 @@ public class ShiftZeroInArray {
      */
     public static void main(String[] args) {
         int[] array = {0, 1, 0, 1, 0, 0, 1, 1, 1, 0};
-        int[] narr = new int[array.length];
+        int[] narr = new int[array.length]; //new Array
 
         int left = 0;
         int right = array.length - 1;

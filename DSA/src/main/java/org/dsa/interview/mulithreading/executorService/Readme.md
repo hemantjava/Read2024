@@ -9,7 +9,6 @@ such as shutdown(), shutdownNow(), and awaitTermination().
 there are basically 4 different implementation classes:-
 
 1) newSingleThreadExecutor();
-
 2) newFixedThreadPool(5);
 3) newCachedThreadPool();
 4) newScheduledThreadPool(6);

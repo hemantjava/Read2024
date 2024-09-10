@@ -1,8 +1,6 @@
 package org.dsa.interview.array;
 
 import java.util.*;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class RemoveDuplicateFromArray {
     public static void main(String[] args) {

@@ -99,3 +99,7 @@ private final Lock lock = new ReentrantLock();
 1. Control: Explicit locks give more control over locking, while implicit locks are managed by the JVM.
 2. Reentrancy: Both synchronized (implicit locks) and ReentrantLock (explicit locks) are reentrant, meaning a thread can acquire the same lock multiple times without deadlocking itself.
 3. Timeouts: Explicit locks can be used with timeouts, whereas implicit locks cannot.
+
+### Race condition 
+ Occurs when two or more threads access shared data and try to change it at the same time. Since thread scheduling can lead to unpredictable thread execution order, 
+ the final outcome depends on the specific sequence of thread execution, which can lead to unexpected and incorrect behavior.

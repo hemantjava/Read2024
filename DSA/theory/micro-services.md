@@ -23,9 +23,6 @@ Ans). there are many ways to communicate one microservice to another microservic
      c). Feign Client
      d). Queue (in even-driven microservice architecture)
      
-4). How to implement microservices in Java?
-Ans). Microservices are a set of loosely coupled small services, and we can use frameworks like Spring Boot, Play Framework,
-     Jersey, and Restlet to implement and develop microservices in Java.  
 
 5). How to deploy microservices in Java?
 Ans). Docker is a top choice for deploying microservices. We can deploy microservices on containers and 
@@ -40,7 +37,7 @@ also use the Function as a Service (FaaS) approach.
                     - It extremely difficult to change technology or framework because everything is tightly coupled.
                     
  **Microservice architecture:**
-                    - Microservices architecture is built as small independent module based on business functionality.qaq
+                    - Microservices architecture is built as small independent module based on business functionality.
                     - It is easy to scale based on demand.
                     - Each project and module has their own database.
                     - Each project is independent and small in size. So overall build and development time gets decrease.
@@ -77,9 +74,10 @@ while the closed state refers to the circuit breaker allowing calls to the servi
 these are two different approaches to managing interactions between services in a distributed system, particularly in the context of microservices and service-oriented architectures (SOA). Here's how they differ:
 
 Orchestration:
-* Definition: Orchestration involves a central controller (orchestrator) that manages and coordinates the interactions between different services. The orchestrator dictates the flow of the process, deciding which service to call and when, handling all the logic for communication.
-* Control: Centralized control. The orchestrator has full visibility and control over the process, making it easier to manage complex workflows.
-* Example: In a microservices-based e-commerce application, an order processing service might act as the orchestrator, sequentially calling the inventory service, payment service, and shipping service to complete an order.
+* Definition: Orchestration involves a central controller (orchestrator) that manages and coordinates the interactions between different services.
+* Control: Centralized control. 
+* Example: In a microservices-based e-commerce application, an order processing service might act as the orchestrator,
+   sequentially calling the inventory service, payment service, and shipping service to complete an order.
 
 Advantages:
 * Simplifies complex workflows by centralizing the logic.
@@ -90,9 +88,13 @@ Disadvantages:
 * The system becomes more tightly coupled to the orchestrator, reducing flexibility.
 
 Choreography:
-* Definition: Choreography involves a decentralized approach where each service knows what to do and when, based on specific events or messages it receives. There’s no central controller; services interact with each other directly, typically through event-based communication.
+* Definition: Choreography involves a decentralized approach where each service knows what to do and when,
+  based on specific events or messages it receives. There’s no central controller; services interact with each other directly,
+  typically through event-based communication.
 * Control: Decentralized control. Each service is responsible for reacting to events and triggering other services as necessary.
-* Example: In the same e-commerce application, when an order is placed, the order service emits an event. The inventory service listens for this event and updates the stock. The payment service also listens for the order event and processes the payment, and so on.
+* Example: In the same e-commerce application, when an order is placed, the order service emits an event. 
+  The inventory service listens for this event and updates the stock. The payment service also listens for the order event and processes the payment,
+  and so on.
 
 Advantages:
 * More resilient and scalable since there is no single point of failure.
@@ -104,4 +106,6 @@ Disadvantages:
 
 Summary:
 * Orchestration: Centralized control with a single orchestrator managing the workflow. Easier to manage but can create a bottleneck.
+ -> Kubernetes, AWS Step Functions
 * Choreography: Decentralized, event-driven interactions between services. More flexible and scalable but harder to manage and monitor.
+ -> Kafka,RabbitMQ,AWS SNS/SQS 

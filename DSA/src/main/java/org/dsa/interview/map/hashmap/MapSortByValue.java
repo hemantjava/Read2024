@@ -14,9 +14,9 @@ public class MapSortByValue {
         map.put("b",2);
         map.put("c",5);
         map.put("d",1);
-        System.out.println(map);
+     //   System.out.println(map);
         sortByValue(map);
-        sortByValueReverse(map);
+       // sortByValueReverse(map);
 
     }
 

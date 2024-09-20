@@ -1,4 +1,4 @@
-package org.dsa.interview.java17;
+package org.dsa.interview.feature.java17;
 
 public class SwitchExample {
     public static void main(String[] args) {

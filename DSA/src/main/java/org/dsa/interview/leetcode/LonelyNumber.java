@@ -5,7 +5,7 @@ import java.util.*;
 public class LonelyNumber {
 
     public static void main(String[] args) {
-        int[] numbers = {10, 7, 6, 3}; //adjacent +1 number not present time complexity and space complexity both are O(n)
+        int[] numbers = {10, 7, 6, 3}; //adjacent +1 number not present. time complexity and space complexity both are O(n)
         System.out.println(getLonelyNumbers(numbers));
     }
 

@@ -11,7 +11,7 @@ extracts text from handwriting or digitally filled documents. It extract structu
 ~~here we are applying validation, business implementation, mapping and 
 converting Client Specific CDM(Canonical Data Model) data from raw data. then we send CDM data to outbound queue.
      In my Project there ara 4 microservices and we are using even-driven microservices architecture.
-     1)MFAX , 2)TES, 3)AUDIT, 4)SFDC
+     1)MFAX , 2)TES, 3)AUDIT, 4)SFDC.
             MFX is responsible for upload patient filled scanned document to S3 bucket 
             and send to inbound queue.
                                  (In inbound queue having 3 details of s3 bucket URL, Tracking id and Document type)
@@ -24,13 +24,16 @@ for cure the cancer patient in early stage.
     
 Note:- (TRF form contains cancer patients blood sample details.)~~ 
      
+```text 
 My project is TES(Text Extraction Service). this is based on Health care domain. Here we are using 
 event driven microservice architecture. and this project having 4 microservices: MFAX, TES,AUDIT, SFDC portal.
      MFAX: Is responsible to upload patient filled scanned pdf document file to S3 bucket and then send an event to inbound queue. 
      In this event having/contain 3 properties: URL address of S3, tracking id, document type.
      After that TES listening that event.TES is OCR based extraction service. TES extracting data by helping of Amazon Textract service.
      After that we are applying some business logic, implementation, mapping and then converting that raw data to client specific CDM(Canonical Data Model)
-     data and send to Outbound queue. after that finally data display in SFDC portal. 
+     data and send to Outbound queue. after that finally data display in SFDC portal.```
+     
+     
       
     
 My Roles and responsibility:-

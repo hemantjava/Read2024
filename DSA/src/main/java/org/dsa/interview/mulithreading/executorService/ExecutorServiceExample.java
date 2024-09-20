@@ -8,7 +8,7 @@ public class ExecutorServiceExample {
 
     public static void main(String[] args) {
 
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        ExecutorService executorService = Executors.newCachedThreadPool();
 
         for (int i = 0; i < 30; i++) {
             int finalI = i;

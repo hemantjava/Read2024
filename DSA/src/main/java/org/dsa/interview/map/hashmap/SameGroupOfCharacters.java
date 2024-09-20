@@ -1,6 +1,7 @@
 package org.dsa.interview.map.hashmap;
 
 import java.util.*;
+
 /*
        EXPECTED OUTPUT:
        ----------------
@@ -27,10 +28,8 @@ public class SameGroupOfCharacters {
 
     }
 
-    public static List<List<String>> groupAnagrams(String[] input) {
+    public static Collection<List<String>> groupAnagrams(String[] input) {
         HashMap<String, List<String>> map = new LinkedHashMap<>();
-        List<List<String>> ls = new ArrayList<>();
-
         for (String str : input) {
             char[] ch = str.toCharArray();
             Arrays.sort(ch);
@@ -42,8 +41,7 @@ public class SameGroupOfCharacters {
                 map.get(sortString).add(str);
             }
         }
-
-        return new ArrayList<>(map.values());
+        return map.values();
     }
 
 }

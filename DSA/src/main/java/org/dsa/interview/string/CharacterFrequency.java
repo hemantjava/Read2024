@@ -12,6 +12,7 @@ public class CharacterFrequency {
         new HashMap<>();
         frequency(str);
         frequency1(str);
+        frequency3(str);
     }
 
     private static void frequency(String input) {
@@ -23,6 +24,18 @@ public class CharacterFrequency {
     private static void frequency1(String input) {
         LinkedHashMap<Character, Integer> collect = input.chars().boxed()
                 .collect(Collectors.toMap(k -> (char) k.intValue(), v -> 1, Integer::sum, LinkedHashMap::new));
+        System.out.println(collect);
+    }
+    private static void frequency2(String input) {
+        Map<String, Long> collect = input.chars().boxed()
+                .map(i -> String.valueOf(i))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        System.out.println(collect);
+    }
+
+    private static void frequency3(String input) {
+        LinkedHashMap<Character, Integer> collect = input.chars().mapToObj(c -> (char) c)
+                .collect(Collectors.toMap(k -> k, v -> 1, Integer::sum, LinkedHashMap::new));
         System.out.println(collect);
     }
 }

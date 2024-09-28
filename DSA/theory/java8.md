@@ -39,3 +39,15 @@ J) The forEach() method in Java 8 is a new feature that allows you to loop over 
    -> map - for data transformation
    -> flatMap - for data transformation + flattening the data 
               like:- list of list, array of array, stream of stream
+
+![img.png](images/img.png)
+
+## Parallel Streams vs SequentialStreams
+![img.png](images/imgP.png)
+
+## method reference operator ::
+is a shorthand notation for referring to methods or constructors without executing them.
+It is primarily used in the context of functional programming, especially with lambda expressions. 
+*  Benefits
+   Conciseness: Makes code shorter and more readable compared to using lambda expressions.
+   Clarity: Clearly indicates that a method is being referenced rather than executed.

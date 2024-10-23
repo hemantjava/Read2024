@@ -1,4 +1,4 @@
-package org.dsa.dsa.search;
+package org.dsa.dsa.searching;
 
 public class LinearSearch {
     public static void main(String[] args) {
@@ -15,6 +15,4 @@ public class LinearSearch {
         }
         return -1;
     }
-
-
 }

@@ -1,9 +1,7 @@
 package org.dsa.interview.stream;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class MapExample {
@@ -22,7 +20,7 @@ public class MapExample {
         System.out.println(collect);
     }
     private static void mapResult( Map<String, String> map){
-        Map<String, Integer> collect = map.entrySet().stream().collect(Collectors.toMap(k -> k.getKey(), v -> v.getValue().length()));
+        Map<String, Integer> collect = map.entrySet().stream().collect(Collectors.toMap(Map.Entry::getKey, v -> v.getValue().length()));
         System.out.println(collect);
     }
 }

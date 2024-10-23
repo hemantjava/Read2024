@@ -25,21 +25,7 @@ public class Queue<T> {
                 '}';
     }
 
-    class Node<T>{  // inner class
-        T value;
-        Node<T> next;
-        Node(T value){
-            this.value = value;
-        }
 
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "next=" + next +
-                    ", value=" + value +
-                    '}';
-        }
-    }
 
     public void printQueue(){
         StringBuilder sb = new StringBuilder();
@@ -74,7 +60,7 @@ public class Queue<T> {
     public Node<T> dequeue(){
         if (length == 0) return null; // if empty queue
         Node<T> temp = first;
-        if (length == 1){
+        if (length == 1){ //special case
             first = null;
             last = null;
         }else {

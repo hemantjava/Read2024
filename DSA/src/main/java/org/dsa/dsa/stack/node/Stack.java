@@ -83,23 +83,4 @@ public class Stack<T> {
         stack.printStack();
     }
 
-    private static class Node<T> {
-        Node<T> next;
-        T data;
-
-        Node(T data) {
-            this.data = data;
-            this.next = null;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "next=" + next +
-                    ", data=" + data +
-                    '}';
-        }
-    }
-
-
 }

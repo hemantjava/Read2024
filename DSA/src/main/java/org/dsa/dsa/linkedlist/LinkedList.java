@@ -1,17 +1,15 @@
 package org.dsa.dsa.linkedlist;
 
+import lombok.Getter;
+
 public class LinkedList<T> {
 
+    @Getter
     private Node<T> head;
     private int length;
 
-    public Node<T> getHead() {
-        return head;
-    }
-
     public LinkedList(T t) {
-        final Node<T> newNode = getNewNode(t);
-        head = newNode;
+        head = newNode(t);
         length++;
     }
 
@@ -62,7 +60,7 @@ public class LinkedList<T> {
     }
 
 
-    private Node<T> getNewNode(T t) {
+    private Node<T> newNode(T t) {
         return new Node<>(t);
     }
 
@@ -74,7 +72,7 @@ public class LinkedList<T> {
             return;
         }
         newNode.next = head;
-        head = newNode; // Head updated with new node
+        head = newNode; //  new node become head
         length++;
     }
 
@@ -142,9 +140,9 @@ public class LinkedList<T> {
     }
 
     void reverse() {
-        Node previous = null;
-        Node current = head;
-        Node next = null;
+        Node<T> previous = null;
+        Node<T> current = head;
+        Node<T> next = null;
 
         while (current != null) {
             next = current.next;
@@ -183,6 +181,5 @@ public class LinkedList<T> {
         }
         return -1;
     }
-
 
 }

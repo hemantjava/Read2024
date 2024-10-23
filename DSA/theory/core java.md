@@ -244,9 +244,9 @@ there is a confusion here which leads to ambiguity and leads to a compile-time e
 not support multiple inheritance.
 
 Q) Java is a "call by value" or "call by reference" language?
--> **Java is a "call by value"** language, which means that when a method is called, the values of the arguments are copied
-and passed to the method. This means that changes made to the parameter values within the method have no effect on the original 
-arguments outside the method.
+-> In Java, all method arguments are passed by value. This means that when you pass an argument to a method,
+Java makes a copy of the argument and passes that copy. However, the behavior differs depending on whether the argument is a primitive type,
+an object reference, or an immutable object like String. Let's explore these cases with examples.
 However, when passing objects as arguments, the reference to the object is passed by value. 
 This means that although the reference is copied, **both the original reference and the copy** still refer to the same object
 in memory. Changes made to the object's state within the method will be reflected in the original object outside the method.

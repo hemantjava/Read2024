@@ -12,7 +12,7 @@ public class ConvertListToMap {
 
         List<Emp> emps = List.of(new Emp(1, "foo"), new Emp(2, "bar"), new Emp(3, "hem"));
         Map<Integer, String> mapArgs = emps.stream()
-                .collect(Collectors.toMap(emp -> emp.getId(), emp -> emp.getName()));
+                .collect(Collectors.toMap(Emp::getId, Emp::getName));
         onlyMapArgs(mapArgs);
     }
 

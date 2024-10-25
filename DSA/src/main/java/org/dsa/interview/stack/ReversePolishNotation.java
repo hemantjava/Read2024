@@ -4,14 +4,10 @@ package org.dsa.interview.stack;
 import java.util.Stack;
 
 public class ReversePolishNotation {
-    public static void main(String[] args) {
-        String[] str = {"10", "6", "9", "3", "+", "-11", "*", "/", "*", "17", "+", "5", "+"};
 
-        System.out.println(notation(str));
-    }
 
-    private static int notation(String[] str) {
-        Stack<Integer> stack = new Stack<>();
+    public static int notation(String[] str) {
+        Stack<Integer> stack = new Stack<>(); // push integer value only
 
         for (String val : str) {
             if (val.equals("+") || val.equals("-") || val.equals("*") || val.equals("/")) {
@@ -19,7 +15,7 @@ public class ReversePolishNotation {
                 int operand2 = stack.pop();
                 stack.push(solve(operand2, operand1, val)); // operand2 is be the 1st
             } else {
-                stack.push(Integer.parseInt(val));
+                stack.push(Integer.parseInt(val)); // convert into integer and push
             }
         }
         return stack.pop();
@@ -27,7 +23,7 @@ public class ReversePolishNotation {
 
     private static int solve(int operand2, int operand1, String val) {
         return switch (val) {
-            case "+" -> (operand2 + operand1);
+            case "+" -> (operand2 + operand1);  //2nd operand then 1st operand
             case "-" -> (operand2 - operand1);
             case "/" -> (operand2 / operand1);
             case "*" -> (operand2 * operand1);

@@ -10,16 +10,16 @@ public final class ImmutableClass {
     private final String stringValue;
     private final List<Integer> listValue;
     private final Map<String, Integer> mapValue;
-    private final Student studentValue;
+    private final Address addressValue;
     private final Date dateValue;
 
     public ImmutableClass(int intValue, String stringValue, List<Integer> listValue,
-                          Map<String, Integer> mapValue, Student studentValue, Date dateValue) {
+                          Map<String, Integer> mapValue, Address addressValue, Date dateValue) {
         this.intValue = intValue;
         this.stringValue = stringValue;
-        this.listValue = List.copyOf(listValue);
-        this.mapValue = Map.copyOf(mapValue);
-        this.studentValue = studentValue;
+        this.listValue = List.copyOf(listValue); // copyOf method returns immutable list
+        this.mapValue = Map.copyOf(mapValue);//copyOf method returns immutable map
+        this.addressValue = new Address(addressValue.getCity(), addressValue.getCountry());
         this.dateValue = new Date(dateValue.getTime());
     }
 
@@ -39,8 +39,8 @@ public final class ImmutableClass {
         return mapValue;
     }
 
-    public Student getStudentValue() {
-        return studentValue;
+    public Address getaddress() {
+        return new Address(addressValue.getCity(), addressValue.getCountry());
     }
 
     public Date getDateValue() {

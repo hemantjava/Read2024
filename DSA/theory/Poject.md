@@ -79,15 +79,6 @@ Parallel Stream: "If we want to process collection of object in multiple CPU cor
                  Less reliable and more error(error-prone).
                  Platform dependent.
                  
-
-4). How to use/ implement JDBC in java ?
-Ans). In Old way There are 5 keys to use/implement JDBC in java:
-        a). Register the driver class.==> forName()
-        b). Create Connection.==> getConnection()
-        c). Create Statement.==> createStatement() 
-        d). Execute Queries.==> executeQuery()
-        e). Close Connections.==> close()
-New way: spring boot yml/properties file configuration
         
 Imp-Q:5). Features of Java8 ?
 a). Functional interface
@@ -136,21 +127,7 @@ Spring Boot : Widely used for building REST APIs.
               It helps to create a stand-alone application.
                
                  
-                 
-9). How to create a class immutable in java?/What is immutable class and how we can create immutable class?
-   
-Ans). Immutable class in java means that once an object is created, we cannot change its content. In Java, 
-      all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable.
-      
-    To create an immutable class in Java, we need to follow these general principles:
-
-      ->Declare the class as final so it can’t be extended.
-      ->Make all of the fields private so that direct access is not allowed.
-      ->Don’t provide setter methods for variables.
-      ->Make all mutable fields final so that a field’s value can be assigned only once.
-      ->Initialize all fields using a constructor method performing deep copy.
-      ->Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
-                 
+                             
                  
 10). Can overloading and overriding static method ?
 

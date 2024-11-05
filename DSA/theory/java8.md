@@ -1,6 +1,6 @@
-# Java 8, released in March 2014, introduced several major features that fundamentally changed the way Java programming is done. Here are some of the most notable new features introduced in Java 8:
+# Java 8, released in March 2014, introduced several major features that fundamentally changed the way Java programming is done.Here are some of the most notable new features introduced in Java 8:
 
- A) Functional interfaces: Functional Interface has only one(single) abstract method. Some predefined functional interfaces as below:-
+A) Functional interfaces: Functional Interface has only one(single) abstract method. Some predefined functional interfaces as below:-
 --------------
   a.1) Predicate -> test()
   a.2) Function  -> apply()
@@ -8,7 +8,7 @@
   a.4) Supplier -> get()
 
   
- B) Stream API: Streams provide a functional way to process collections of data.
+B) Stream API: Streams provide a functional way to process collections of data.
 --------------
 C) Date & Time API: The Date/Time API provides a more comprehensive and flexible way of handling date and time as comparing than the old java.util.Date and java.util.Calendar classes.
 --------------

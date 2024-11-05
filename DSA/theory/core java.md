@@ -174,13 +174,15 @@ ii). Terminal operations: collect(), forEach(), reduce().
 -> Comparable meant for Natural sorting -> compareTo()
 -> Comparator meant for Customised sorting -> compare()
 
-21) Difference between Arraylist vs LinkedList? -> Both are list implemented classes ->When our frequent operation is
-    data read then ArrayList is the best option but worst for write/delete ->When our frequent operation is data
-    write/delete then LinkedList is the best option but worst for read
+Q) Difference between Arraylist vs LinkedList? 
+>  Both are list implemented classes, When our frequent operation is
+   data read then ArrayList is the best option but worst for write/delete ->When our frequent operation is data
+   write/delete then LinkedList is the best option but worst for read
 
-22) What is String constant pool? -> String Pool in Java is a special storage space in Java Heap memory where string
-    literals are stored. It is also known by the names - String Constant Pool or String Intern Pool. Whenever a string
-    literal is created, the JVM first checks the String Constant Pool before creating a new String object.
+Q) what is String constant pool? 
+ > String Pool in Java is a special storage space in Java Heap memory where string
+   literals are stored. It is also known by the names - String Constant Pool or String Intern Pool. Whenever a string
+   literal is created, the JVM first checks the String Constant Pool before creating a new String object.
 
 Others================================================
 
@@ -253,13 +255,57 @@ in memory. Changes made to the object's state within the method will be reflecte
 This can sometimes create confusion and make it appear as though Java is using "call by reference," but in reality,
 it is still "call by value."
 
-Q)Create Immutable classes:-
-To create a custom immutable class in Java, you need to follow these steps:
+Q)what is Immutable class and how to create Immutable class?
+>Immutable class in java means that once an object is created, we cannot change its content. In Java,
+all the wrapper classes (like Integer, Boolean, Byte, Short) and String class is immutable.
 
+To create a custom immutable class in Java, we need to follow these steps:
 a)Declare the class as final to prevent inheritance and overriding of methods.
 b)Declare all instance variables as private and final to ensure they cannot be modified once assigned.
-c)Provide a constructor that initializes all the instance variables.
-d)Do not provide any setter methods to modify the instance variables.
-e)If necessary, provide getter methods to access the values of the instance variables.
-f)If the class contains mutable objects, ensure they are deeply copied or made immutable as well.
-e)Override the equals(), hashCode(), and toString() methods for proper object comparison and string representation.
+c)Initialize all fields through a constructor and do not provide any setter methods.
+d)If necessary, provide getter methods to access the values of the instance variables.
+e)For mutable fields or collections, create defensive copies during assignment.
+f)Ensure methods that return collections or mutable fields unmodifiable views or defensive copies to prevent
+modifications.
+g)Perform cloning of objects in the getter methods to return a copy rather than returning the actual object reference.
+
+Q)what is time and space complexity in programming?
+> In programming, time complexity and space complexity are metrics used to analyze how efficient an algorithm is,
+> especially as the input size grows.
+1. Time Complexity - measures the amount of time an algorithm takes to run a function based on their input size.
+   It’s expressed using Big O notation (e.g., O(1), O(log n), O(n), O(n^2)) to indicate the growth rate of the runtime.
+   For example:
+   O(1) (Constant time): The algorithm takes the same amount of time, regardless of input size.
+   O(n) (Linear time): The time increases linearly with the input size.
+   O(n^2) (Quadratic time): The time grows quadratically with the input size, often seen in nested loops.
+2. Space Complexity - measures the amount of memory an algorithm takes to run a function based on their input size.    
+   Like time complexity, it’s also expressed with Big O notation, indicating the growth rate of memory usage.
+   For example:
+   O(1): The algorithm uses a constant amount of memory regardless of input size.
+   O(n): Memory usage grows linearly with input size.
+   O(n^2): Memory usage grows quadratically with input size.
+
+### Q) How to implement JDBC in java ?
+-> In Old way There are 5 keys to use/implement JDBC in java:
+   a). Register the driver class ==> forName()
+   b). Create Connection ==> getConnection()
+   c). Create Statement ==> createStatement()
+   d). Execute Queries ==> executeQuery()
+   e). Close Connections ==> close()
+
+### Q) What is Shallow Copy and Deep Copy 
+>When you copy an object, essentially creating a new object.
+The type of copy determines how the object's fields are handled.
+
+Shallow Copy:
+* Creates a new object with the same references to the original object's fields.
+* Changes made to the original object's fields will also reflect in the copied object.
+
+Deep Copy:
+* Creates a new object and recursively copies all fields, including nested objects.
+* Changes made to the original object's fields will not affect the copied object.
+
+Key Points:
+* Primitive Data Types: For primitive data types, both shallow and deep copies are essentially the same.
+* Reference Data Types: Shallow copies create new objects but share references to the original objects' fields. Deep copies create new objects and recursively copy all fields, including nested objects.
+* Performance Considerations: Deep copies can be more expensive, especially for large objects or complex data structures.

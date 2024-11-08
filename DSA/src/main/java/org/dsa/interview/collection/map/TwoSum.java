@@ -1,4 +1,4 @@
-package org.dsa.interview.map;
+package org.dsa.interview.collection.map;
 
 import java.util.Arrays;
 import java.util.HashMap;

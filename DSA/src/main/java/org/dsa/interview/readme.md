@@ -16,7 +16,7 @@ It is often used for traversal and backtracking problems.
 Explores a graph/tree level by level, visiting all the neighbors of a node before moving to the next level.
 It is useful for finding the shortest path or exploring the nearest nodes.
 ### Dynamic Programming: 
-A technique that breaks down complex problems into smaller overlapping subproblems and solves them to build up the solution.
+A technique that breaks down complex problems into smaller overlapping problems and solves them to build up the solution.
 It is used to optimize recursive or repetitive problems.
 ### Greedy Algorithm:
 Makes locally optimal choices at each step with the hope of finding a global optimum.

@@ -1,4 +1,4 @@
-package org.dsa.interview.map.hashmap;
+package org.dsa.interview.collection.map.hashmap;
 
 import java.util.Comparator;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package org.dsa.interview.set;
+package org.dsa.interview.collection.set;
 
 import java.util.Arrays;
 import java.util.HashSet;

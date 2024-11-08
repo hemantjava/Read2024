@@ -1,4 +1,4 @@
-package org.dsa.interview.list;
+package org.dsa.interview.collection.list;
 
 import java.util.ArrayList;
 import java.util.List;

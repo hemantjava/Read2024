@@ -1,10 +1,10 @@
-
-
-**Mention what is the benefits of Apache Kafka over the traditional technique?**
-Fast: A single Kafka broker can serve thousands of clients by handling megabytes of reads and writes per second
-Scalable: Data are partitioned and streamlined over a cluster of machines to enable larger data
-Durable: Messages are persistent and is replicated within the cluster to prevent data loss
-Distributed by Design: It provides fault tolerance guarantees and durability
-
-**4) Mention what is the meaning of broker in Kafka?**
-   In Kafka cluster, broker term is used to refer Server.
+Q What is docker ?
+> Docker is a powerful platform for developing, shipping, and running applications in lightweight, portable containers
+* 1. Containerization
+     * Docker allows applications to be packaged with all their dependencies and configuration, making them portable and isolated.
+* 2. Portability Across Environments
+     * Docker containers can run consistently across different environments: development, testing, and production
+* 3. Version Control and Rollbacks
+     * Docker images are versioned, allowing developers to track changes and roll back to previous versions if needed.
+* 4. Rapid Deployment and Scalability
+     * Containers make it easy to scale applications up or down quickly based on demand

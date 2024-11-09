@@ -7,11 +7,12 @@ public class SwitchExample {
         System.out.println(getDatType("kgs"));
     }
 
-    public static String getDatType(String  day){
+    private static String getDatType(String  day){
         return switch (day){
             case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" -> "WeekDay";
             case "Saturday", "Sunday" -> "WeekEnd";
             default -> "Invalid Day";
         };
     }
+
 }

@@ -20,7 +20,7 @@ converting Client Specific CDM(Canonical Data Model) data from raw data. then we
     Then outbound queue listen by SFDC portal end user.
     
 Purpose of this architecture: Gathering the information from Cancer Patient and creating the data lake,
-for cure the cancer patient in early stage.
+to cure the cancer patient in early stage.
     
 Note:- (TRF form contains cancer patients blood sample details.)~~ 
      

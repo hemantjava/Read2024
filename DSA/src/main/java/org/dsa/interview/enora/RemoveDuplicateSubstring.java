@@ -13,8 +13,7 @@ public class RemoveDuplicateSubstring {
         List<String> filteredList = list.stream()
                 .filter(word -> list.stream()
                         .noneMatch(other -> other.contains(word) && !other.equals(word)))
-                .collect(Collectors.toList());
-
+                .toList();
         System.out.println(filteredList);//[sunday, monday, tuesday, wednesday, thursday, friday]
     }
 

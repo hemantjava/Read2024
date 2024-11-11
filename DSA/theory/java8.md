@@ -13,7 +13,7 @@ B) Stream API: Streams provide a functional way to process collections of data.
 C) Date & Time API: The Date/Time API provides a more comprehensive and flexible way of handling date and time as comparing than the old java.util.Date and java.util.Calendar classes.
 --------------
 D) Default and Static Methods: Default methods allow you to add new methods to an interface,
-  without breaking the existing implementations.
+   without breaking the existing implementations.
 --------------
 E) Optional class -> Optional is a container class that may or may not contain a value,it is meant for avoid null pointer exception
 --------------

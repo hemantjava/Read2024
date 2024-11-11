@@ -6,8 +6,10 @@ like Gmail or Salesforce, aimed at end-users.
 
 * PaaS (Platform as a Service) offers a platform for developers to build, test,
 and deploy applications without managing the underlying infrastructure, 
-like AWS Elastic Beanstalk or Heroku. SaaS is for using software, 
-while PaaS is for developing software.
+like AWS Elastic Beanstalk or Heroku.
+
+* Diff: SaaS is for using as a software, 
+while PaaS is use for developing software.
 
 ## why should be override hashcode and equals methods in pojo and hashmap
 Overriding hashCode() and equals() in POJOs is essential when using objects as keys in collections like HashMap, HashSet, or Hashtable. Here's why:

@@ -2,9 +2,9 @@
                                                         ==============
 1). What is Microservices ?
 Ans). Microservices are an architectural design for building a distributed application using containers.
-       an application as a collection of services that are-
-       Independently deployable
-       Loosely coupled
+       an application as a collection of services they are:-
+       * Independently deployable
+       * Loosely coupled
        Organized around business capabilities
        Owned by a small team
        Highly maintainable and testable

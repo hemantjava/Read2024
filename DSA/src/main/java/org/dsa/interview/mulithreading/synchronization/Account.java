@@ -1,30 +1,28 @@
 package org.dsa.interview.mulithreading.synchronization;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Optional;
 
+@Setter
+@Getter
 public class Account {
 
     private double amount;
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
 
     public synchronized void deposit(double amountToBeAdded) {
         amount += amountToBeAdded;
     }
 
     public synchronized void withDraw(double amountToBeWithdraw) {
-        Optional.ofNullable(amount).map(aDouble -> {
+        Optional.of(amount).map(aDouble -> {
             if (aDouble >= amountToBeWithdraw) {
                 return aDouble - amountToBeWithdraw;
+            }else {
+               throw  new RuntimeException("Amount not enough");
             }
-            return aDouble;
-        }).orElseThrow(() -> new RuntimeException("Insufficient amount"));
+        });
     }
 
     @Override

@@ -11,10 +11,10 @@ Ans). Identity and Access Management (IAM) is a web service for securely control
  resources users and applications can access."])
    4 key concepts: Users, Groups, Roles and Policies/Permissions.
 
-•  	Users: Specific Individuals, can receive personal logins.
-•	Groups: Collection of users.
-•	Roles: Collection of Policies (DB Read, DB Write).
-•	Policies/Permissions: Law level permission to resources(Allow/Deny).
+*  	Users: Specific Individuals, can receive personal logins.
+*	Groups: Collection of users.
+*	Roles: Collection of Policies (DB Read, DB Write).
+*	Policies/Permissions: Law level permission to resources(Allow/Deny).
 
 3).  What is Amazon S3 ?
 

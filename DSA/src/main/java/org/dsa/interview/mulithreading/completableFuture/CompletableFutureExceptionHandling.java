@@ -6,23 +6,29 @@ import java.util.concurrent.ExecutionException;
 public class CompletableFutureExceptionHandling {
 
     public static void main(String[] args) {
-        CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(() -> {
-            // Simulating a task that may throw an exception
-            if (true) { //if (true)
-                throw new RuntimeException("Task failed!");
+        CompletableFuture<String> exceptionalFuture = CompletableFuture.supplyAsync(() -> {
+            if (Math.random() > 0.5) {
+                throw new RuntimeException("An error occurred!");
             }
-            return "Task completed successfully";
-        }).exceptionally(ex -> {
-            System.out.println("Exception occurred: " + ex.getMessage());
-            return "Fallback value"; // provide a fallback value in case of exception
+            return "Success";
         });
 
+        exceptionalFuture
+                .exceptionally(ex -> "Recovered from error: " + ex.getMessage())
+                .thenAccept(System.out::println);
+
+        exceptionalFuture.handle((result, ex) -> {
+            if (ex != null) {
+                return "Error handled: " + ex.getMessage();
+            } else {
+                return "Result: " + result;
+            }
+        }).thenAccept(System.out::println);
 
         try {
-            String result = completableFuture.get(); // blocking call to get the result
-            System.out.println("Result: " + result);
+            exceptionalFuture.get();
         } catch (InterruptedException | ExecutionException e) {
-            System.err.println("Exception occurred while executing the task: " + e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 }

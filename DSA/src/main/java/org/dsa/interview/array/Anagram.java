@@ -6,7 +6,8 @@ import java.util.Map;
 
 public class Anagram {
     public static void main(String[] args) {
-        System.out.println(isValidAnagram2("anagram", "mnagraa"));
+        System.out.println(isValidAnagram("anagram", "mnagraa"));
+        System.out.println(isValidAnagram1("anagram", "mnagraa"));
         System.out.println(isValidAnagram2("anagram", "mnagraa"));
     }
 
@@ -62,7 +63,7 @@ public class Anagram {
 
         // Decrement the count for each character in the second string
         for (char c : str2.toCharArray()) {
-            int count = charCountMap.getOrDefault(c, 0);//char if not exist return 0
+            int count = charCountMap.getOrDefault(c, 0);//char if not exist then return 0
             if (count == 0) {
                 return false; // Character not found in str1
             }

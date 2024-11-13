@@ -309,3 +309,20 @@ Key Points:
 * Primitive Data Types: For primitive data types, both shallow and deep copies are essentially the same.
 * Reference Data Types: Shallow copies create new objects but share references to the original objects' fields. Deep copies create new objects and recursively copy all fields, including nested objects.
 * Performance Considerations: Deep copies can be more expensive, especially for large objects or complex data structures.
+
+Q) **ClassNotFoundException vs NoClassDefFoundError**
+
+> ClassNotFoundException
+Type: Checked Exception (subclass of Exception).
+When it occurs: This exception occurs when the Java Virtual Machine (JVM) or a ClassLoader tries to load a class at runtime
+using methods like Class.forName(), ClassLoader.loadClass(), or ClassLoader.findSystemClass(),
+but the class with the specified name cannot be found in the classpath.
+
+> NoClassDefFoundError
+Type: Error (subclass of Error).
+When it occurs: This error occurs if the JVM has already successfully compiled and referenced a class, but it fails to find it when needed at runtime.
+This often happens when a dependency is removed or becomes unavailable after the code was compiled
+
+**Note:-Summary**
+ClassNotFoundException: Occurs when trying to dynamically load a class that’s not found in the classpath.
+NoClassDefFoundError: Occurs when a class was available during compilation but is missing or inaccessible at runtime.

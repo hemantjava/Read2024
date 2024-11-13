@@ -15,6 +15,7 @@ public class UniqueLongestSubstring {
         System.out.println("--------------------------------");
         System.out.println("input: " + longestSubstringLength(input));
         System.out.println("string: " + longestSubstringLength(string));
+        System.out.println("input : " + lengthOfLongestSubstring(input));
     }
 
     private static void findUniqueLongestSubstring(String input) {
@@ -44,7 +45,7 @@ public class UniqueLongestSubstring {
     public static int longestSubstringLength(String string) {
         int maxLength = 0;
 
-        Map<Character, Integer> map = new HashMap<>();
+        Map<Character, Integer> map = new LinkedHashMap<>();
         for (int i = 0; i < string.length(); i++) {
             char visited = string.charAt(i);
             if (!map.containsKey(visited)) {
@@ -53,7 +54,8 @@ public class UniqueLongestSubstring {
                 i = map.get(visited);
                 map.clear();
             }
-            maxLength = Math.max(maxLength, map.size());
+            if (map.size() > maxLength)
+               maxLength =  map.size();
         }
         return maxLength;
     }

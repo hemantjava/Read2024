@@ -23,7 +23,7 @@ import static org.mockito.Mockito.*;
     }
 
     @Test
-    @DisplayName("2. verify(...).times(n) - Verifies that a method was called exactly n times.")
+    @DisplayName("2. verify(...times(n)) - Verifies that a method was called exactly n times.")
     void testVerifyTimes() {
         List<String> mockedList = mock(List.class);
         mockedList.add("Hello");
@@ -52,7 +52,7 @@ import static org.mockito.Mockito.*;
     void testVerifyAtMost() {
         List<String> mockedList = mock(List.class);
         mockedList.add("Hello");
-        verify(mockedList, atMost(1)).add("Hello"); // Verifies add("Hello") was called at most twice
+        verify(mockedList, atMost(2)).add("Hello"); // Verifies add("Hello") was called at most twice
     }
 
     @Test
@@ -76,8 +76,9 @@ import static org.mockito.Mockito.*;
     void testVerifyNoMoreInteractions() {
         List<String> mockedList = mock(List.class);
         mockedList.add("Hello");
-        verify(mockedList).add("Hello");
-        verifyNoMoreInteractions(mockedList); // Verifies no other interactions occurred
+        mockedList.add("Hello");
+        verify(mockedList,times(2)).add("Hello");
+        verifyNoMoreInteractions(mockedList); // Verifies no other interactions occurred //verify(mockedList,times(2)).add("Hello")
     }
 
     @Test
@@ -102,8 +103,5 @@ import static org.mockito.Mockito.*;
         }).start();
         verify(mockedList, timeout(1000).times(2)).add("Hello"); // Waits up to 1000ms for add("Hello") to be called twice
     }
-
-
-
 
 }

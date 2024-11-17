@@ -9,11 +9,12 @@ public class ShiftZeroToEnd {
         System.out.println(Arrays.toString(arr));
     }
 
+    //Note: writeIndex when element is non-zero and i increment each times
     private static void shiftZeroToEnd(int[] arr) {
         int writeIndex = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
-                if (arr[writeIndex] == 0) {
+                if (arr[writeIndex] == 0) {//swapping
                     int temp = arr[i];
                     arr[i] = arr[writeIndex];
                     arr[writeIndex] = temp;

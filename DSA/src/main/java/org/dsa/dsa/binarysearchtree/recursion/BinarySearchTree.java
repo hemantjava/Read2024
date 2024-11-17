@@ -113,7 +113,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         Queue<Node<T>> queue = new LinkedList<>(); //hold node
         List<T> result = new ArrayList<>();//hold data
         queue.add(root);
-        while (queue.size() > 0){
+        while (!queue.isEmpty()){
             Node<T> currentNode = queue.remove();//dequeue
             result.add(currentNode.data);
             if (currentNode.left != null){
@@ -140,20 +140,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
             root = root.right;
         }
         return maxValue;
-    }
-    class Node<T extends Comparable<T>> {
-        T data;
-        Node<T> left;
-        Node<T> right;
-
-        public Node(T data) {
-            this.data = data;
-        }
-
-        @Override
-        public String toString() {
-            return "[" + data + "]";
-        }
     }
 
     public static void main(String[] args) {

@@ -45,3 +45,16 @@ and the value is the data being passed.
 **q)Diff between interceptor vs filter?**
 Interceptors operate on the method invocation level, 
 while filters operate on the request/response level in a web application.
+
+**CAP theorem**
+
+![img.png](images/img8.png)
+
+* Applications
+
+Understanding CAP theorem helps architects and developers design systems based on specific requirements:
+
+  * For banking or financial transactions, Consistency is often prioritized (CP).
+  * For user-facing applications like social media, Availability is often prioritized (AP).
+
+The CAP theorem emphasizes the importance of identifying trade-offs in distributed system design to meet business needs effectively.

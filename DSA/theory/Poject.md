@@ -1,16 +1,15 @@
                                                 =====Asking Questions in Interview=====
                                                 =======================================
  My current project is Text Extraction service(TES). And It is Based on Health care domain.
- Client: Gaurdand health
  
 TES is a OCR based text extraction service it is basically extracting 
 data from Scanned pdf Document/TRF(Test Requisition Form)
 by helping of amazon textract service. Amazon Textract is a machine learning (ML) Amazon service that automatically 
-extracts text from handwriting or digitally filled documents. It extract structured data such as tables,form,Blocks,Lines,Words etc. 
+extracts text from handwriting or digitally filled documents. It extracts structured data such as tables,form,Blocks,Lines,Words etc. 
 
 ~~here we are applying validation, business implementation, mapping and 
 converting Client Specific CDM(Canonical Data Model) data from raw data. then we send CDM data to outbound queue.
-     In my Project there ara 4 microservices and we are using even-driven microservices architecture.
+     In my Project there ara 4 microservices and we are using even-driven microservices' architecture.
      1)MFAX , 2)TES, 3)AUDIT, 4)SFDC.
             MFX is responsible for upload patient filled scanned document to S3 bucket 
             and send to inbound queue.
@@ -19,8 +18,8 @@ converting Client Specific CDM(Canonical Data Model) data from raw data. then we
     CDM(Canonical Data Model) response from raw data. And push the cdm response to the outbound queue. 
     Then outbound queue listen by SFDC portal end user.
     
-Purpose of this architecture: Gathering the information from Cancer Patient and creating the data lake,
-to cure the cancer patient in early stage.
+The Purpose of this project: Gathering the information from blood Cancer Patient and creating the data lake,
+and generate the analytical report to cure the cancer patient in early stage.
     
 Note:- (TRF form contains cancer patients blood sample details.)~~ 
      

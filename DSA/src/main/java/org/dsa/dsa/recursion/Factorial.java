@@ -6,14 +6,15 @@ public class Factorial {
         System.out.println(factorial(4));
     /*
 
-    Call stacks
+execution    Call stacks
 
-4    1
-3    2 * factorial(1)
-2    3 * factorial(2)
-1    4 * factorial(3)
+4    1                  ->4th call
+3    2 * factorial(1)   ->3rd call
+2    3 * factorial(2)   ->2nd call
+1    4 * factorial(3)   ->1st call
 
 Execution:- top to bottom
+    => 1
     => 2 * 1 =2
     => 3 * 2 =6
     => 4 * 6 =24  result

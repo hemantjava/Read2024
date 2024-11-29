@@ -12,9 +12,12 @@ public class TwoPointerTwoSum {
         int target = 4;
         System.out.println(Arrays.toString(twoSum(arr, target)));
         System.out.println(Arrays.toString(twoSumIndex(arr, target)));
+        int[] nums = {1, 2, 3, 4, 6};
+        int trg = 6;
+        System.out.println(Arrays.toString(twoPointers(nums,trg)));//[1,3]
     }
 
-    //it is applicable if array has sorted order only
+    //it is applicable if an array has sorted order only
     private static int[] twoSum(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
@@ -30,7 +33,7 @@ public class TwoPointerTwoSum {
         return new int[]{-1, -1};
     }
 
-    //it is applicable if array has sorted order only
+    //it is applicable if an array has sorted order only
     private static int[] twoSumIndex(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
@@ -45,4 +48,20 @@ public class TwoPointerTwoSum {
         }
         return new int[]{-1, -1};
     }
+
+    private static int[] twoPointers(int[] nums, int target) {
+        int left = 0, right = nums.length - 1;
+        for (int i = 0; i < nums.length; i++) {
+             if (nums[left] + nums[right] == target)
+                 return new int[]{left, right};
+             if (nums[left] + nums[right] < target){
+                 left++;
+             }else {
+                 right--;
+             }
+        }
+        return new int[]{-1, -1};
+    }
+
+
 }

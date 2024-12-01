@@ -2,7 +2,7 @@ package org.dsa.dsa.graph;
 
 public class Main {
     public static void main(String[] args) {
-        Graph graph = new Graph();
+        Graph<String> graph = new Graph<>();
         graph.addVertex("A");
         graph.addVertex("B");
         graph.addVertex("C");
@@ -13,7 +13,7 @@ public class Main {
         graph.addEdge("A","D");
         graph.addEdge("B","D");
         graph.addEdge("C","D");
-        //graph.printGraph();
+        graph.printGraph();
         graph.removeEdge("A","B");
         graph.printGraph();
         graph.removeVertex("C");

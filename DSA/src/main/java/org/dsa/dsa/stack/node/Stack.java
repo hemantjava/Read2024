@@ -4,8 +4,11 @@ public class Stack<T> {
     private Node<T> top;
     private int size; //optional
 
-    Stack() {
-        top = null; //optional
+    Stack() {}
+
+    Stack(T data) {
+        this.top = new Node<>(data);
+        size = 1;
     }
 
     public boolean isEmpty() {
@@ -16,12 +19,20 @@ public class Stack<T> {
         return size;
     }
 
+    public void printStack() {
+        Node<T> temp = top; // don't affect existing top values
+        while (temp != null) {
+            System.out.print(temp.data+" ");
+            temp = temp.next;
+        }
+    }
+
     public void push(T data) {
         Node<T> newNode = new Node<>(data);
         if (!isEmpty()) {
             newNode.next = top;
         }
-        top = newNode; //    now newNode pointing top position
+        top = newNode;
         size++;
     }
 
@@ -38,14 +49,6 @@ public class Stack<T> {
         if (isEmpty())
             throw new IllegalStateException("Stack is empty");
         return top.data;
-    }
-
-    public void printStack() {
-        Node<T> temp = top; // don't effect existing top values
-        while (temp != null) {
-            System.out.print(temp.data+" ");
-            temp = temp.next;
-        }
     }
 
     public T pop() {
@@ -81,6 +84,7 @@ public class Stack<T> {
         System.out.println("pop():" + stack.pop());
         System.out.println("printStack");
         stack.printStack();
+
     }
 
 }

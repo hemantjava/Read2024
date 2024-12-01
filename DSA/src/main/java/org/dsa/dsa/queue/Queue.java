@@ -26,6 +26,13 @@ public class Queue<T> {
     }
 
 
+    public T getLast() {
+        return last.value;
+    }
+
+    public T getFirst() {
+        return first.value;
+    }
 
     public void printQueue(){
         StringBuilder sb = new StringBuilder();
@@ -64,7 +71,7 @@ public class Queue<T> {
             first = null;
             last = null;
         }else {
-            first = temp.next; //2nd element in the queue
+            first = first.next; //2nd element in the queue
             temp.next = null; // temp and first node pointing same address
         }
         length--;

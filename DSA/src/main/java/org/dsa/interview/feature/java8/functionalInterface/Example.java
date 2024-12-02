@@ -6,4 +6,9 @@ public class Example implements MyInterface{
        Example example = new Example();
        example.newMethod();
     }
+
+    @Override
+    public int sum(int num1, int num2) {
+        return 0;
+    }
 }

@@ -24,23 +24,21 @@ public class Anagram {
     }
 
     //preferred one
-    private static boolean isValidAnagram1(String source, String target) {
-
-        //length should be equal to target length and source length
-        if (source.length() != target.length()) {
+    private static boolean isValidAnagram1(String s, String t) {
+        if (s.length() != t.length())
             return false;
-        }
-        int[] temp = new int[26];
+        char[] fre = new char[26];
 
-        for (int i = 0; i < source.length(); i++) {
-            temp[source.charAt(i) - 'a']++; //(source.charAt(i) - 'a') -> index
-            temp[target.charAt(i) - 'a']--;
+        for (char c : s.toCharArray()) {
+            fre[c - 'a']++;
         }
-        for (int v : temp) {
-            if (v != 0) {
+
+        for (char c : t.toCharArray()) {
+            if (fre[c - 'a'] == 0)
                 return false;
-            }
+            fre[c - 'a']--;
         }
+
         return true;
     }
     private static boolean isValidAnagram2(String str1, String str2) {

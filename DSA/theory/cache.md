@@ -1,5 +1,5 @@
 ### **Top 5 Caching Strategies Explained in Depth**
-
+![img_8.png](images/img_8.png)
 Caching is a crucial technique in software systems that helps improve performance, reduce database load, and enhance user experience. Below is a detailed explanation of the five major caching strategies, including their working principles, advantages, disadvantages, and ideal use cases.
 
 ---

@@ -1,3 +1,35 @@
+Executor thread pools commonly used in Java, typically created using static factory methods in the Executors class:-
+
+1) FixedThreadPool:
+Description: Creates an ExecutorService with a fixed number of threads. The number of threads remains constant throughout the lifetime of the pool.
+Behavior: If more tasks are submitted than there are threads, the excess tasks are placed in an unbounded queue and wait until a thread becomes available.
+Use Cases: Suitable for applications where you want to limit the maximum number of threads concurrently executing tasks to control resource consumption (e.g., in a server where you don't want to exhaust CPU or memory with too many threads).
+
+2) CachedThreadPool:
+Description: Creates an ExecutorService that creates new threads as needed to handle incoming tasks. It reuses previously constructed threads when they are available.
+Behavior: If a thread remains idle for a certain period (default 60 seconds), it is terminated and removed from the pool. This pool has no fixed size limit on the number of threads.
+Use Cases: Ideal for applications with many short-lived, asynchronous tasks. It can dynamically adjust the number of threads based on the workload, efficiently handling bursts of requests. However, it can create a very large number of threads if tasks arrive faster than they can be processed, potentially exhausting system resources.
+
+3) SingleThreadExecutor:
+Description: Creates an ExecutorService that uses a single worker thread to execute tasks.
+Behavior: All tasks are executed sequentially in the order they are submitted. This guarantees that tasks will complete in submission order and that no two tasks will run concurrently.
+Use Cases: Useful when you need to ensure tasks are executed serially, for example, for event processing where order matters or for tasks that modify shared resources that are not thread-safe.
+
+4) ScheduledThreadPool:
+Description: Creates an ExecutorService that can schedule tasks to run after a specified delay or at regular intervals. It uses a fixed number of threads for scheduled execution.
+Behavior: Provides methods like schedule(), scheduleAtFixedRate(), and scheduleWithFixedDelay() for timed task execution.
+Use Cases: Perfect for background tasks, recurring jobs, or delayed actions (e.g., sending reminder emails, periodically updating data, triggering alarms).
+
+5) WorkStealingPool (Introduced in Java 8):
+Description: Creates a work-stealing thread pool with a target parallelism level. It's based on the ForkJoinPool.
+Behavior: Designed for applications with tasks that might generate other sub-tasks (like recursive algorithms). Threads that finish their own tasks can "steal" tasks from other busy threads, leading to better CPU utilization.
+Use Cases: Suited for highly parallel, divide-and-conquer style algorithms where tasks can be broken down into smaller, independent sub-tasks.
+
+6) VirtualThreadPerTaskExecutor (Introduced in Java 21)
+What it does:
+Creates a new virtual thread for each submitted task: Unlike traditional thread pools (like FixedThreadPool or CachedThreadPool) that reuse a limited number of "platform threads" (OS-managed threads), newVirtualThreadPerTaskExecutor() creates a new virtual thread for every Runnable or Callable task you submit to it.
+Leverages virtual threads: This is the key. Virtual threads are extremely lightweight threads managed by the Java Virtual Machine (JVM), not directly by the operating system
+
 ### What are differences between submit() and execute() methods in ExecutorService?
 -> submit() and execute().
 Both methods execute tasks asynchronously using a thread pool managed by the ExecutorService. 
